@@ -26,11 +26,11 @@ input[type=text] {
     margin-top: 30px;
     width: 200px;
 }
-#story {
-    margin-top: 12px;
+#theStory {
+    margin-top: 50px;
     width: 45%;
     border: 1px dashed rgb(1, 2, 1);
-    padding: 8px;
+    padding: 10px;
     float: left;
 }
 .replacement {
