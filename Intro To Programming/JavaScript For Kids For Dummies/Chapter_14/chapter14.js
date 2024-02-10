@@ -16,11 +16,10 @@
 // listen for button clicks
 document.getElementById("placeOrder").addEventListener("click", placeOrder);
 
-/**
- * gets form values
- * calculates prices
- * produces output
- */
+// Gets form values
+// Calculates prices
+// Produces output
+
 function placeOrder() {
     // get form values
     let numPizzas = document.getElementById("numPizzas").value;
@@ -37,23 +36,29 @@ function placeOrder() {
     // create the output
     let theOutput = "<p>Thank you for your order.</p>";
 
+
     // todo: output the delivery price, if there is one
-if (deliveryPrice === 0) {
-    theOutput += "<p>You get free delivery!</p>";
-} else {
-    theOutput += "<p>Your delivery cost is: $" + deliveryPrice;
-}
+    if (deliveryPrice === 0) {
+        theOutput += "<p>You get free delivery!</p>";
+    } else {
+        theOutput += "<p>Your delivery cost is: $" + deliveryPrice;
+    }
+
+    theOutput += "<p>Your total is: $" + (orderPrice +
+        deliveryPrice);
+
     // display the output
-    document.getElementById("displayTotal").innerHTML = theOutput;
+    document.getElementById("displayTotal").innerHTML =
+        theOutput;
 }
 
-/**
- * calculates pizza price
- */
+
+// Calculates price
+
 function calculatePrice(numPizzas, typePizza) {
     let orderPrice = Number(numPizzas) * 10;
     let extraCharge = 0;
-    
+
     // todo: calculate extraCharge, if there is one.
     if (typePizza === "supreme") {
         extraCharge = Number(numPizzas) * 2;
@@ -61,17 +66,16 @@ function calculatePrice(numPizzas, typePizza) {
     orderPrice += extraCharge;
     return orderPrice;
 }
-/**
- * calculates delivery price
- */
+
+// Calculates Delivery
+
 function calculateDelivery(orderPrice, deliveryCity, birthday) {
- let deliveryPrice = 0;
-    
+    let deliveryPrice = 0;
+
     // todo: calculate delivery price, if there is one
-    if (((deliveryCity === "Anytown") && (orderPrice > 10)) || (birthday === "yes"))
-    {
+    if (((deliveryCity === "Anytown") && (orderPrice > 10)) || (birthday === "yes")) {
         deliveryPrice = 0;
-    } else  {
+    } else {
         deliveryPrice = 5;
     }
     return deliveryPrice;

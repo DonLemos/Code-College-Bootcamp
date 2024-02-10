@@ -1,25 +1,25 @@
 //DUMMIES CHAPTER 17
 //
-for (let counter = 0; counter < 500; counter++) {
-    console.log(counter + ": Hello, Javascript!");
-}
-//
-for (let i = 10; i > 0; i--) {
-    alert (i);
-    }
-    alert ("Blast Off!");
-//
-let myFriends = ["Agatha", "Agnes", "Jermaine", "Jack"];
-for (let i = 0; i < myFriends.length; i++) {
-    alert(myFriends[i] + " is my friend.");
-}
-//
-//Geting a random number
-alert(Math.random() * 11);
-alert(Math.floor(Math.random() * 11));
-alert(Math.floor(Math.random() * (1000 - 100) + 100));
-let randomFriend = Math.floor(Math.random() * myFriends.length);
-alert(myFriends[randomFriend]);
+// for (let counter = 0; counter < 500; counter++) {
+//     console.log(counter + ": Hello, Javascript!");
+// }
+// //
+// for (let i = 10; i > 0; i--) {
+//     alert (i);
+//     }
+//     alert ("Blast Off!");
+// //
+// let myFriends = ["Agatha", "Agnes", "Jermaine", "Jack"];
+// for (let i = 0; i < myFriends.length; i++) {
+//     alert(myFriends[i] + " is my friend.");
+// }
+// //
+// //Geting a random number
+// alert(Math.random() * 11);
+// alert(Math.floor(Math.random() * 11));
+// alert(Math.floor(Math.random() * (1000 - 100) + 100));
+// let randomFriend = Math.floor(Math.random() * myFriends.length);
+// alert(myFriends[randomFriend]);
 //
 //Random Weather App
 //

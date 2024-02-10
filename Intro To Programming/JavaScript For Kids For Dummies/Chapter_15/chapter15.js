@@ -49,6 +49,8 @@
 // console.log(myNewDate);
 // console.log(myNewDate.setMonth(7));
 //
+
+
 //ACTIVITY CALLENDER PROGRAM
 //
 let todayDate = document.getElementById("todaysdate");
@@ -71,32 +73,35 @@ function displayDate() {
 function displayActivity() {
     //todo: find out day of the week
     let dayOfWeek = d.getDay();
-    /*todo: set a variable, called "youShould", with a different string based on what day of the week it is.*/
+    //todo: set a variable, called "youShould", with a different string based on what day of the week it is.
     let youShould;
     switch (dayOfWeek) {
         case 0:
-        youShould = "Take it easy, you've earned it!";
-        break;
+            youShould = "Take it easy, you've earned it!";
+            break;
         case 1:
             youShould = "Get up and go to work!";
             break;
-            case 2:
-                youShould = "Feel better, it's one day closer to Friday!";
+        case 2:
+            youShould = "Feel better, it's one day closer to Friday!";
+            break;
+        case 3:
+            youShould = "Get excited, we are half way there!"
+            break;
+        case 4:
+            youShould = "Go out for dinner after work!"
+            break;
+        case 5:
+            youShould = "Go out with friends!";
+            break;
+        case 6:
+            youShould = "Its Friyay!"
+            case 7:
+                youShould = "Do something fun today!"
                 break;
-                case 3:
-                    youShould = "Get excited, we are half way there!"
-                    break;
-                    case 4:
-                        youShould = "Go out for dinner after work!"
-                        break;
-                        case 5:
-                            youShould = "Go out with friends!";
-                            break;
-                            case 6:
-                                youShould = "Do something fun today!"
-                                default:
-                                    youShould = "Hmmm, something is broken!"
-                                    break;
+        default:
+            youShould = "Hmmm, something is broken!"
+            break;
     }
     //Output the value of "youShould" into the "thingToDo" div
     document.getElementById("thingToDo").innerHTML = youShould

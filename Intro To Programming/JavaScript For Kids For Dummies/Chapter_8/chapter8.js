@@ -11,7 +11,7 @@ let myDreamCar = {
     bodyStyle: "Coupe",
     price: "4 990 000"
     };
-    alert("The type of Dream Car is: " + typeof myDreamCar);
+    alert("The type of Dream Car is a: " + myDreamCar.make);
 document.getElementById("pricetag").innerHTML = myDreamCar.price;
 document.getElementById("modelyear").innerHTML = myDreamCar.year;
 document.getElementById("body").style.backgroundColor = myDreamCar.colour;
