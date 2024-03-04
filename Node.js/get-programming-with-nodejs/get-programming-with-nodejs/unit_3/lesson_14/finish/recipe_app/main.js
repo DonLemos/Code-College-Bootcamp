@@ -19,7 +19,18 @@ db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
 });
 
-var myQuery = Subscriber.findOne({
+Subscriber.create(
+  {
+    name: "Jon Wexler",
+    email: "jon@jonwexler.com"
+  },
+  function (error, savedDocument) {
+    if (error) console.log(error);
+    console.log(savedDocument);
+  }
+);
+
+let myQuery = Subscriber.findOne({
   name: "Jon Wexler"
 }).where("email", /wexler/);
 
