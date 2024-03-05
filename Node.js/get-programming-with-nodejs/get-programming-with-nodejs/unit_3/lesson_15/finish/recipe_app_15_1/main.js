@@ -41,6 +41,12 @@ app.use(
 app.use(express.json());
 app.use(homeController.logRequestPaths);
 
+// app.get("/subscribers", subscribersController.getAllSubscribers,
+//   (req, res, next) => {
+//     console.log(req.data);
+//     res.send(req.data);
+//   });
+
 app.get("/name", homeController.respondWithName);
 app.get("/items/:vegetable", homeController.sendReqParam);
 
@@ -53,9 +59,9 @@ app.get("/courses", homeController.showCourses);
 app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedContactForm);
 
-app.use(errorController.logErrors);
-app.use(errorController.respondNoResourceFound);
-app.use(errorController.respondInternalError);
+// app.use(errorController.logErrors);
+// app.use(errorController.respondNoResourceFound);
+// app.use(errorController.respondInternalError);
 
 app.listen(app.get("port"), () => {
   console.log(`Server running at http://localhost:${app.get("port")}`);
