@@ -31,3 +31,4 @@ subscriberSchema.methods.findLocalSubscribers = function() {
 };
 
 module.exports = mongoose.model("Subscriber", subscriberSchema);
+
