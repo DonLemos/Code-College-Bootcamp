@@ -38,3 +38,4 @@ exports.saveSubscriber = (req, res) => {
       if (error) res.send(error);
     });
 };
+
